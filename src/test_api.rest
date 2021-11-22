@@ -1,0 +1,16 @@
+POST http://localhost:3333/api/short HTTP/1.1
+content-type: application/json
+
+{
+  "origUrl": "https://cutt.ly/"
+}
+
+###
+
+PUT http://localhost:3333/api/custom HTTP/1.1
+content-type: application/json
+
+{
+  "origUrl": "https://www.moh.gov.sg/",
+  "urlId": "sg-covid"
+}
