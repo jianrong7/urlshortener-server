@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  url-shortener:
+    container_name: backend
+    build: ./
+    command: yarn start
+    working_dir: /usr/src/url-shortner-server
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./:/usr/src/url-shortner-server
+    environment:
+      - DATABASE_URL=mongodb+srv://urlShortenerAdmin:bSrP7La2qu79zY2P@cluster0.lxaoa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
